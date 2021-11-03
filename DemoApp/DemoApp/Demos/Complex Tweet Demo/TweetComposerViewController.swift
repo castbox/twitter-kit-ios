@@ -28,7 +28,7 @@ class TweetComposerViewController: UIViewController {
 
     private lazy var composer: TWTRComposer = {
         let composer = TWTRComposer()
-        composer.setText("Hello World.")
+        composer.setText("Hello World.Hello World.Hello World.Hello World.Hello World.Hello World.Hello World.")
         return composer
     }()
 

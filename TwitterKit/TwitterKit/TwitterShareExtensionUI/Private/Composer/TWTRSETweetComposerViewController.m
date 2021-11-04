@@ -307,11 +307,7 @@ static void *TSETweetTextKVOCOntext = &TSETweetTextKVOCOntext;
 
     [self.dataSource registerCellClassesInTableView:self.tableView];
     
-    // fix TextViewContainer height anomaly
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.tweetTextViewContainer configureWithTweet:self.dataSource.composedTweet];
-    });
-    
+    [self.tweetTextViewContainer configureWithTweet:self.dataSource.composedTweet];
 }
 
 - (void)updateViewConstraints

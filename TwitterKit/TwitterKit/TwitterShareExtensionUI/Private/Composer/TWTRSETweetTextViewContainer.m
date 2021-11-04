@@ -117,6 +117,12 @@ static const UIEdgeInsets kComposeTextViewTextContainerInsets = {.top = 8, .left
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    // fix TextViewContainer height anomaly
+    [self _tseui_updateLineCount];
+}
+
 - (CGFloat)textViewHeight
 {
     return _textView.bounds.size.height;
